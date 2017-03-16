@@ -22,7 +22,7 @@ const BUSYOUS:Busyou[] = [
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Tour of Busyou';
+  title = '武将祭り';
 
   busyou:Busyou = {
       id:1,
