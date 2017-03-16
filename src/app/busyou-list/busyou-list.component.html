@@ -1,0 +1,11 @@
+<h1>
+  {{title}}
+</h1>
+<app-busyou-detail [busyou]="selectedBusyou"></app-busyou-detail>
+
+<h2>武将たち</h2>
+<ul class="busyous">
+  <li *ngFor="let busyou of busyous" [class.selected]="busyou===selectedBusyou" (click)="onSelect(busyou)">
+    <span class="my-badge">{{busyou.id}}</span>{{busyou.name}}
+  </li>
+</ul>

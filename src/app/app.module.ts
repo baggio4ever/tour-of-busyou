@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 
 import { AlertModule } from 'ng2-bootstrap';
 import { BusyouDetailComponent } from './busyou-detail/busyou-detail.component';
+import { BusyouListComponent } from './busyou-list/busyou-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     BusyouDetailComponent,
+    BusyouListComponent,
   ],
   imports: [
     BrowserModule,
