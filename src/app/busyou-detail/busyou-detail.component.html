@@ -1,0 +1,13 @@
+<div *ngIf="busyou">
+  <h2>
+    詳細:{{busyou.name}}
+  </h2>
+  <alert type="info">オッス！オラ {{busyou.name}}！！</alert>
+  <div>
+    <label>id: </label>{{busyou.id}}
+  </div>
+  <div>
+    <label>武将名: </label>
+    <input [(ngModel)]="busyou.name" placeholder="name">
+  </div>
+</div>

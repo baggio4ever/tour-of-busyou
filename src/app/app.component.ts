@@ -12,6 +12,8 @@ const BUSYOUS:Busyou[] = [
   { id:8, name:'浅井長政'},
   { id:9, name:'伊達正宗'},
   { id:10, name:'大友宗麟'},
+  { id:11, name:'毛利元就'},
+  { id:12, name:'三好長慶'},
 ];
 
 @Component({
@@ -21,6 +23,7 @@ const BUSYOUS:Busyou[] = [
 })
 export class AppComponent {
   title = 'Tour of Busyou';
+
   busyou:Busyou = {
       id:1,
       name:'上杉謙信'

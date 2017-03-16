@@ -1,11 +1,11 @@
 <h1>
   {{title}}
 </h1>
-<div *ngIf="selectedBusyou">
+<!--<div *ngIf="selectedBusyou">
   <h2>
     詳細:{{selectedBusyou.name}}
   </h2>
-  <alert type="success">オッス！オラ {{selectedBusyou.name}}！！</alert>
+  <alert type="success">オッス！オラ {{selectedBusyou}}</alert>
   <div>
     <label>id: </label>{{selectedBusyou.id}}
   </div>
@@ -13,7 +13,8 @@
     <label>武将名: </label>
     <input [(ngModel)]="selectedBusyou.name" placeholder="name">
   </div>
-</div>
+</div>-->
+<app-busyou-detail [busyou]="selectedBusyou"></app-busyou-detail>
 
 <h2>武将たち</h2>
 <ul class="busyous">
