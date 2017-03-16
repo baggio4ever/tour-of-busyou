@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { AlertModule } from 'ng2-bootstrap';
 import { BusyouDetailComponent } from './busyou-detail/busyou-detail.component';
 import { BusyouListComponent } from './busyou-list/busyou-list.component';
-
+import { BusyouService } from './busyou.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,9 @@ import { BusyouListComponent } from './busyou-list/busyou-list.component';
     HttpModule,
     AlertModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    BusyouService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

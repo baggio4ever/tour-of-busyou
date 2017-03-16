@@ -7,16 +7,11 @@ import { BusyouService } from '../busyou.service';
   selector: 'app-busyou-list',
   templateUrl: './busyou-list.component.html',
   styleUrls: ['./busyou-list.component.css'],
-  providers: [BusyouService]
+//  providers: [BusyouService]
 })
 export class BusyouListComponent implements OnInit {
 
-  title = '武将祭り';
-
-  // busyou:Busyou = {
-  //     id:1,
-  //     name:'上杉謙信'
-  // };
+//  title = '武将祭り';
 
   busyous :Busyou[];
 
