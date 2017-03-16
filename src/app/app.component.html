@@ -1,21 +1,23 @@
 <h1>
   {{title}}
 </h1>
-<h2>
-  詳細:{{busyou.name}}
-</h2>
-<alert type="success">hello</alert>
-<div>
-  <label>id: </label>{{busyou.id}}
-</div>
-<div>
-  <label>name: </label>
-  <input [(ngModel)]="busyou.name" placeholder="name">
+<div *ngIf="selectedBusyou">
+  <h2>
+    詳細:{{selectedBusyou.name}}
+  </h2>
+  <alert type="success">オッス！オラ {{selectedBusyou.name}}！！</alert>
+  <div>
+    <label>id: </label>{{selectedBusyou.id}}
+  </div>
+  <div>
+    <label>武将名: </label>
+    <input [(ngModel)]="selectedBusyou.name" placeholder="name">
+  </div>
 </div>
 
 <h2>武将たち</h2>
 <ul class="busyous">
-  <li *ngFor="let busyou of busyous">
+  <li *ngFor="let busyou of busyous" [class.selected]="busyou===selectedBusyou" (click)="onSelect(busyou)">
     <span class="my-badge">{{busyou.id}}</span>{{busyou.name}}
   </li>
 </ul>

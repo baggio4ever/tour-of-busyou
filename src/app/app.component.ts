@@ -10,6 +10,8 @@ const BUSYOUS:Busyou[] = [
   { id:6, name:'北条氏康'},
   { id:7, name:'今川義元'},
   { id:8, name:'浅井長政'},
+  { id:9, name:'伊達正宗'},
+  { id:10, name:'大友宗麟'},
 ];
 
 @Component({
@@ -25,4 +27,10 @@ export class AppComponent {
   };
 
   busyous = BUSYOUS;
+
+  selectedBusyou:Busyou;
+
+  onSelect(busyou:Busyou){
+    this.selectedBusyou = busyou;
+  }
 }
