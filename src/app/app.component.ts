@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
   }
 
   getBusyous():void {
-//    this.busyouService.getBusyous().then(busyous => this.busyous = busyous);
-    this.busyouService.getBusyousSlowly().then(busyous => this.busyous = busyous);
+    this.busyouService.getBusyous().then(busyous => this.busyous = busyous);
+//    this.busyouService.getBusyousSlowly().then(busyous => this.busyous = busyous);
   }
 }
