@@ -21,4 +21,9 @@ export class BusyouService {
         );
     })
   }
+
+  getBusyou(id:number):Promise<Busyou> {
+    return this.getBusyous()
+                .then( busyous=>busyous.find( busyou=>busyou.id===id ) );
+  }
 }

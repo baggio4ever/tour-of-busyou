@@ -39,6 +39,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
       {
         path: 'busyous',
         component: BusyouListComponent
+      },
+      {
+        path: 'detail/:id',
+        component: BusyouDetailComponent
       }
     ])
   ],
