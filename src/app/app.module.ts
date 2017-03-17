@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 //import { RouterModule } from '@angular/router';
 
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+
 import { AppComponent } from './app.component';
 
 import { AlertModule } from 'ng2-bootstrap';
@@ -27,7 +30,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     FormsModule,
     HttpModule,
     AlertModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService)
     // RouterModule.forRoot([
     //   {
     //     path: '',
