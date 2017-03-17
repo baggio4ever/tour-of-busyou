@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 
 import { Busyou } from '../busyou';
 import { BusyouService } from '../busyou.service';
@@ -11,13 +12,11 @@ import { BusyouService } from '../busyou.service';
 })
 export class BusyouListComponent implements OnInit {
 
-//  title = '武将祭り';
-
   busyous :Busyou[];
 
   selectedBusyou:Busyou;
 
-  constructor(private busyouService:BusyouService) {}
+  constructor(private busyouService:BusyouService,private router:Router) {}
 
   ngOnInit():void {
     this.getBusyous();
@@ -30,5 +29,9 @@ export class BusyouListComponent implements OnInit {
   getBusyous():void {
     this.busyouService.getBusyous().then(busyous => this.busyous = busyous);
 //    this.busyouService.getBusyousSlowly().then(busyous => this.busyous = busyous);
+  }
+
+  gotoDetail():void {
+    this.router.navigate(['/detail',this.selectedBusyou.id]);
   }
 }

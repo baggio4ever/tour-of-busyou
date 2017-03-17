@@ -10,7 +10,7 @@ import { BusyouService } from './busyou.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = '武将祭り';
+//  title = '武将祭り';
 
 //  busyous :Busyou[];
 
