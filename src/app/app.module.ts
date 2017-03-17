@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
+//import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
@@ -12,6 +12,7 @@ import { BusyouListComponent } from './busyou-list/busyou-list.component';
 import { BusyouService } from './busyou.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 
 @NgModule({
@@ -26,25 +27,26 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FormsModule,
     HttpModule,
     AlertModule.forRoot(),
-    RouterModule.forRoot([
-      {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full'
-      },
-      {
-        path: 'dashboard',
-        component: DashboardComponent
-      },
-      {
-        path: 'busyous',
-        component: BusyouListComponent
-      },
-      {
-        path: 'detail/:id',
-        component: BusyouDetailComponent
-      }
-    ])
+    AppRoutingModule
+    // RouterModule.forRoot([
+    //   {
+    //     path: '',
+    //     redirectTo: '/dashboard',
+    //     pathMatch: 'full'
+    //   },
+    //   {
+    //     path: 'dashboard',
+    //     component: DashboardComponent
+    //   },
+    //   {
+    //     path: 'busyous',
+    //     component: BusyouListComponent
+    //   },
+    //   {
+    //     path: 'detail/:id',
+    //     component: BusyouDetailComponent
+    //   }
+    // ])
   ],
   providers: [
     BusyouService
