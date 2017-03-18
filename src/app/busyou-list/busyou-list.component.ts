@@ -34,4 +34,14 @@ export class BusyouListComponent implements OnInit {
   gotoDetail():void {
     this.router.navigate(['/detail',this.selectedBusyou.id]);
   }
+
+  add(name:string):void {
+    name = name.trim();
+    if( !name ){ return; }
+    this.busyouService.create(name)
+          .then( busyou=>{
+            this.busyous.push(busyou);
+            this.selectedBusyou = null;
+          });
+  }
 }

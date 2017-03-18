@@ -1,4 +1,12 @@
 <h2>武将たち</h2>
+<div>
+  <label>武将名:</label>
+  <input #busyouName />
+  <button (click)="add(busyouName.value); busyouName.value = ''">
+    追加
+  </button>
+</div>
+
 <ul class="busyous">
   <li *ngFor="let busyou of busyous" [class.selected]="busyou===selectedBusyou" (click)="onSelect(busyou)">
     <span class="my-badge">{{busyou.id}}</span>{{busyou.name}}

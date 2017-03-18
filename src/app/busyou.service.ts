@@ -55,6 +55,14 @@ export class BusyouService {
             .then(()=>busyou)
             .catch(this.handleError);
   }
+
+  create(name:string):Promise<Busyou> {
+    return this.http
+            .post(this.busyouUrl,JSON.stringify({name:name}),{headers:this.headers})
+            .toPromise()
+            .then(res=>res.json().data)
+            .catch(this.handleError);
+  }
 /*
   getBusyou(id:number):Promise<Busyou> {
     return this.getBusyous()
