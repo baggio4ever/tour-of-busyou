@@ -25,6 +25,16 @@ export class BusyouService {
     return Promise.reject(error.message || error);
   }
 
+  getBusyou(id:number):Promise<Busyou> {
+    const url=`${this.busyouUrl}/${id}`;
+    console.info(url);
+
+    return this.http.get(url)
+            .toPromise()
+            .then( response=>response.json().data as Busyou )
+            .catch(this.handleError);
+  }
+
   getBusyousSlowly(): Promise<Busyou[]> {
     return new Promise( resolve => {
       // simulate server latency with 2 sec delay.
@@ -35,8 +45,20 @@ export class BusyouService {
     })
   }
 
+  private headers = new Headers({'Content-Type':'application/json'});
+
+  update( busyou:Busyou ):Promise<Busyou> {
+    const url = `${this.busyouUrl}/${busyou.id}`;
+    return this.http
+            .put(url,JSON.stringify(busyou),{headers:this.headers})
+            .toPromise()
+            .then(()=>busyou)
+            .catch(this.handleError);
+  }
+/*
   getBusyou(id:number):Promise<Busyou> {
     return this.getBusyous()
                 .then( busyous=>busyous.find( busyou=>busyou.id===id ) );
   }
+*/
 }
