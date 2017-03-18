@@ -16,6 +16,7 @@ import { BusyouService } from './busyou.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { BusyouSearchComponent } from './busyou-search/busyou-search.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     BusyouDetailComponent,
     BusyouListComponent,
     DashboardComponent,
+    BusyouSearchComponent,
   ],
   imports: [
     BrowserModule,
