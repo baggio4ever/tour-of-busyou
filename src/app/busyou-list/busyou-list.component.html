@@ -8,8 +8,13 @@
 </div>
 
 <ul class="busyous">
-  <li *ngFor="let busyou of busyous" [class.selected]="busyou===selectedBusyou" (click)="onSelect(busyou)">
-    <span class="my-badge">{{busyou.id}}</span>{{busyou.name}}
+  <li *ngFor="let busyou of busyous"
+      [class.selected]="busyou===selectedBusyou"
+      (click)="onSelect(busyou)">
+    <span class="my-badge">{{busyou.id}}</span>
+    <span>{{busyou.name}}</span>
+    <button class="delete"
+      (click)="delete(busyou); $event.stopPropagation()">x</button>
   </li>
 </ul>
 <!--<app-busyou-detail [busyou]="selectedBusyou"></app-busyou-detail>-->

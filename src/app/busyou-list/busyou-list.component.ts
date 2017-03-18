@@ -44,4 +44,13 @@ export class BusyouListComponent implements OnInit {
             this.selectedBusyou = null;
           });
   }
+
+  delete(busyou:Busyou):void {
+    this.busyouService
+          .delete(busyou.id)
+          .then(()=>{
+            this.busyous = this.busyous.filter(b=>b!==busyou);
+            if(this.selectedBusyou==busyou){ this.selectedBusyou=null;}
+          });
+  }
 }

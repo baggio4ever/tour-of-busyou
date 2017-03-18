@@ -19,9 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "styles.css"
       ],
+      "_comment"  :"bootstrap 使うときは、コレをstylesに追加すること../node_modules/bootstrap/dist/css/bootstrap.min.css",
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
