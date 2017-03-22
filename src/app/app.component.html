@@ -1,6 +1,6 @@
-<!--<h1>
+<h1>
   {{title}}
-</h1>-->
+</h1>
 <!--<div *ngIf="selectedBusyou">
   <h2>
     詳細:{{selectedBusyou.name}}
@@ -23,10 +23,15 @@
   </li>
 </ul>-->
 
-<nav>
-  <a routerLink="/dashboard">ダッシュボード</a>
-  <a routerLink="/busyous">武将たち</a>
+<div>
+  <a class="btn btn-primary" routerLink="/dashboard" routerLinkActive="active">ダッシュボード</a>
+  <a class="btn btn-primary" routerLink="/busyous" routerLinkActive="active">武将たち</a>
+</div>
+<!--<nav>
+  <a routerLink="/dashboard" routerLinkActive="active">ダッシュボード</a>
+  <a routerLink="/busyous" routerLinkActive="active">武将たち</a>
 </nav>
+-->
 <router-outlet></router-outlet>
 
 <!--<app-busyou-list></app-busyou-list>-->

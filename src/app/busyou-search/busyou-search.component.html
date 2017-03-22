@@ -1,0 +1,14 @@
+<div id="search-component">
+  <h4>武将検索</h4>
+  <input #searchBox id="search-box"
+      (keyup)="search(searchBox.value)" />
+  <div>
+    <div *ngFor="let busyou of busyous | async"
+      (click)="gotoDetail(busyou)"
+      class="search-result"
+    >
+      {{busyou.name}}
+    </div>
+  </div>
+</div>
+

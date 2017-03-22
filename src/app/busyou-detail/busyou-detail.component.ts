@@ -33,4 +33,9 @@ export class BusyouDetailComponent implements OnInit {
   goBack():void {
     this.location.back();
   }
+
+  save():void {
+    this.busyouService.update(this.busyou)
+      .then( ()=>this.goBack() );
+  }
 }
