@@ -20,8 +20,9 @@
 <!--      <button type="button" class="btn btn-danger"
         (click)="delete(busyou); $event.stopPropagation()">削除</button>
 -->
+  <button type="button" class="btn btn-primary" (click)="gotoDetail()" [disabled]="busyou!==selectedBusyou">詳細</button>
       <button type="button" class="btn btn-danger"
-        (click)="busyouToBeDeleted=busyou; staticModal.show()">削除</button>
+        (click)="busyouToBeDeleted=busyou; staticModal.show()" [disabled]="busyou!==selectedBusyou">削除</button>
     </td>
   </tr>
 </table>
@@ -59,11 +60,10 @@
 </ul>
 -->
 <!--<app-busyou-detail [busyou]="selectedBusyou"></app-busyou-detail>-->
-<div *ngIf="selectedBusyou">
+<!--<div *ngIf="selectedBusyou">
   <h2>
     {{selectedBusyou.name}} が一番好きだぜ！
   </h2>
   <button type="button" class="btn btn-primary" (click)="gotoDetail()">詳細へ</button>
-<!--  <button (click)="gotoDetail()">詳細へ</button>
--->
 </div>
+-->
