@@ -7,6 +7,9 @@ import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
+import { ButtonsModule } from 'ng2-bootstrap/buttons';
+import { ModalModule } from 'ng2-bootstrap/modal';
+
 import { AppComponent } from './app.component';
 
 import { AlertModule } from 'ng2-bootstrap';
@@ -33,7 +36,9 @@ import { BusyouSearchComponent } from './busyou-search/busyou-search.component';
     HttpModule,
     AlertModule.forRoot(),
     AppRoutingModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService)
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    ButtonsModule.forRoot(),
+    ModalModule.forRoot()
     // RouterModule.forRoot([
     //   {
     //     path: '',

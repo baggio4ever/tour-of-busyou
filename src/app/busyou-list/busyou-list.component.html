@@ -2,12 +2,51 @@
 <div>
   <label>武将名:</label>
   <input #busyouName />
-  <button (click)="add(busyouName.value); busyouName.value = ''">
+  <button type="button" class="btn btn-primary" (click)="add(busyouName.value); busyouName.value = ''">追加</button>
+<!--  <button (click)="add(busyouName.value); busyouName.value = ''">
     追加
   </button>
+-->
 </div>
 
-<ul class="busyous">
+<table class="table table-hover table-striped">
+  <tr><th>id</th><th>武将名</th><th></th></tr>
+  <tr *ngFor="let busyou of busyous"
+      [class.selected]="busyou===selectedBusyou"
+      (click)="onSelect(busyou)">
+    <td>{{busyou.id}}</td>
+    <td>{{busyou.name}}</td>
+    <td>
+<!--      <button type="button" class="btn btn-danger"
+        (click)="delete(busyou); $event.stopPropagation()">削除</button>
+-->
+      <button type="button" class="btn btn-danger"
+        (click)="busyouToBeDeleted=busyou; staticModal.show()">削除</button>
+    </td>
+  </tr>
+</table>
+
+<div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">削除しちゃって良いですか？</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        This is static modal, backdrop click will not close it.
+        Click <b>&times;</b> to close modal.
+        <button type="button" class="btn btn-danger" (click)="deleteIt(); $event.stopPropagation(); staticModal.hide()">はい、バッサリお願いします</button>
+        <button type="button" Class="btn" (click)="staticModal.hide()">キャンセル</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<ul class="busyous">
   <li *ngFor="let busyou of busyous"
       [class.selected]="busyou===selectedBusyou"
       (click)="onSelect(busyou)">
@@ -17,10 +56,13 @@
       (click)="delete(busyou); $event.stopPropagation()">x</button>
   </li>
 </ul>
+-->
 <!--<app-busyou-detail [busyou]="selectedBusyou"></app-busyou-detail>-->
 <div *ngIf="selectedBusyou">
   <h2>
     {{selectedBusyou.name}} が一番好きだぜ！
   </h2>
-  <button (click)="gotoDetail()">詳細へ</button>
+  <button type="button" class="btn btn-primary" (click)="gotoDetail()">詳細へ</button>
+<!--  <button (click)="gotoDetail()">詳細へ</button>
+-->
 </div>

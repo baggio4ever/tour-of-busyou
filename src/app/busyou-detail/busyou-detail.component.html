@@ -3,13 +3,23 @@
     詳細:{{busyou.name}}
   </h2>
   <alert type="info">オッス！オラ {{busyou.name}}！！</alert>
-  <div>
+
+  <dl class="dl-horizontal">
+    <dt>id: </dt><dd>{{busyou.id}}</dd>
+    <dt>武将名: </dt>
+    <dd><input [(ngModel)]="busyou.name" placeholder="武将名"></dd>
+  </dl>
+<!--  <div>
     <label>id: </label>{{busyou.id}}
   </div>
   <div>
     <label>武将名: </label>
     <input [(ngModel)]="busyou.name" placeholder="武将名">
   </div>
-  <button (click)="goBack()">戻る</button>
+-->  
+<button type="button" class="btn btn-danger" (click)="goBack()">戻る</button>
+  <button type="button" class="btn btn-primary" (click)="save()">保存</button>
+<!--  <button (click)="goBack()">戻る</button>
   <button (click)="save()">保存</button>
+-->
 </div>
