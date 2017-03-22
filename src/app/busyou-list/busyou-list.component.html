@@ -31,15 +31,16 @@
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title pull-left">削除しちゃって良いですか？</h4>
+        <h4 class="modal-title pull-left">削除の確認</h4>
         <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        This is static modal, backdrop click will not close it.
-        Click <b>&times;</b> to close modal.
-        <button type="button" class="btn btn-danger" (click)="deleteIt(); $event.stopPropagation(); staticModal.hide()">はい、バッサリお願いします</button>
+        <div *ngIf="busyouToBeDeleted">
+        {{busyouToBeDeleted.name}} を削除しちゃって良いですか？
+        </div>
+        <button type="button" class="btn btn-danger" (click)="deleteIt(); $event.stopPropagation(); staticModal.hide()">はい。バッサリお願いします</button>
         <button type="button" Class="btn" (click)="staticModal.hide()">キャンセル</button>
       </div>
     </div>
