@@ -23,7 +23,7 @@
       (click)="onSelect(busyou)">
     <td>{{busyou.id}}</td>
     <td>
-      <img [src]="busyou.img" class="rounded" width="96">
+      <img [src]="getBusyouPortrait(busyou)" class="rounded" width="96">
     </td>
     <td>
       {{busyou.name}}
@@ -60,7 +60,7 @@
       </div>
       <div class="modal-body">
         <div *ngIf="busyouToBeDeleted" class="text-center">
-          <img [src]="busyouToBeDeleted.img" class="rounded">
+          <img [src]="getBusyouPortrait(busyouToBeDeleted)" class="rounded">
           <div>
             <strong>{{busyouToBeDeleted.name}}</strong> を削除しちゃって良いですか？
           </div>

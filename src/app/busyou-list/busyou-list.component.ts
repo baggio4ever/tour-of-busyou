@@ -62,4 +62,12 @@ export class BusyouListComponent implements OnInit {
     console.info("deleteIt()!");
     this.delete( this.busyouToBeDeleted );
   }
+
+  getBusyouPortrait(busyou:Busyou):string {
+    if(busyou.img != '') {
+      return busyou.img;
+    } else {
+      return 'assets/images/no_portrait.jpg';
+    }
+  }
 }
