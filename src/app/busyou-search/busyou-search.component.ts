@@ -69,11 +69,18 @@ export class BusyouSearchComponent implements OnInit {
 
 
   public selectedName:string;
-  public dataSource:Observable<any>;
+  public dataSource:Observable<Busyou>;
+
+  gotoDetailById(busyouId:number):void {
+    let link = ['/detail',busyouId];
+    this.router.navigate(link);
+  }
 
   public typeaheadOnSelect(e:TypeaheadMatch):void {
     console.log('Selected value: ',e.value);
     console.log('Selected e: ',e);
+//    console.log('instanceof Busyou: ',e.item instanceof Busyou);
+    this.gotoDetailById(e.item.id);
   }
   public names:any[] = [
     {kana:'Shiga',name:'滋賀'},

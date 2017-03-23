@@ -1,6 +1,6 @@
 <div id="search-component">
   <h4>武将検索</h4>
-  <input #searchBox id="search-box"
+<!--  <input #searchBox id="search-box"
       (keyup)="search(searchBox.value)" />
   <div>
     <div *ngFor="let busyou of busyous | async"
@@ -10,13 +10,14 @@
       {{busyou.name}}
     </div>
   </div>
-
-  <pre class="card card-block card-header">Model: {{selectedName | json}}</pre>
+-->
+<!--  <pre class="card card-block card-header">Model: {{selectedName | json}}</pre>
+-->
   <input 
     [(ngModel)]="selectedName"
     [typeahead]="dataSource"
     typeaheadOptionField="name"
-    placeholder="武将検索したい"
+    placeholder="武将名入れてみて"
     (typeaheadOnSelect)="typeaheadOnSelect($event)"
     class="form-control">
 <!--  <pre class="card card-block card-header">Model: {{selectedName | json}}</pre>

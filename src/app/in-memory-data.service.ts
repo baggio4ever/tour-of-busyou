@@ -30,6 +30,12 @@ export class InMemoryDataService implements InMemoryDbService {
       { id:19, name:'上杉景虎'},
       { id:20, name:'北条早雲'},
       { id:21, name:'北条氏政'},
+      { id:22, name:'徳川秀忠'},
+      { id:23, name:'徳川家光'},
+      { id:24, name:'徳川吉宗'},
+      { id:25, name:'徳川綱吉'},
+      { id:26, name:'徳川家茂'},
+      { id:27, name:'徳川慶喜'},
     ];
 
     return {busyous};    
