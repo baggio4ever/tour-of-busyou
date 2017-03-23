@@ -1,27 +1,6 @@
 <h1>
   {{title}}
 </h1>
-<!--<div *ngIf="selectedBusyou">
-  <h2>
-    詳細:{{selectedBusyou.name}}
-  </h2>
-  <alert type="success">オッス！オラ {{selectedBusyou}}</alert>
-  <div>
-    <label>id: </label>{{selectedBusyou.id}}
-  </div>
-  <div>
-    <label>武将名: </label>
-    <input [(ngModel)]="selectedBusyou.name" placeholder="name">
-  </div>
-</div>-->
-<!--<app-busyou-detail [busyou]="selectedBusyou"></app-busyou-detail>-->
-
-<!--<h2>武将たち</h2>
-<ul class="busyous">
-  <li *ngFor="let busyou of busyous" [class.selected]="busyou===selectedBusyou" (click)="onSelect(busyou)">
-    <span class="my-badge">{{busyou.id}}</span>{{busyou.name}}
-  </li>
-</ul>-->
 
 <!--<div>
   <a class="btn btn-primary" routerLink="/dashboard" routerLinkActive="active">ダッシュボード</a>
@@ -30,18 +9,17 @@
 -->
 <ul class="nav nav-tabs">
   <li routerLink="/dashboard" routerLinkActive="active">
-    <a>ダッシュボード</a>
+    <a>
+      <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+      ダッシュボード
+    </a>
   </li>
   <li routerLink="/busyous" routerLinkActive="active">
-    <a>武将たち</a>
+    <a>
+      <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+      武将たち
+    </a>
   </li>
 </ul>
 
-<!--<nav>
-  <a routerLink="/dashboard" routerLinkActive="active">ダッシュボード</a>
-  <a routerLink="/busyous" routerLinkActive="active">武将たち</a>
-</nav>
--->
 <router-outlet></router-outlet>
-
-<!--<app-busyou-list></app-busyou-list>-->

@@ -19,7 +19,7 @@ export class InMemoryDataService implements InMemoryDbService {
       { id:6, name:'北条氏康',img:'00036_m.jpg' },
       { id:7, name:'今川義元',img:'00016_m.jpg' },
       { id:8, name:'浅井長政',img:'00018_m.jpg' },
-      { id:9, name:'伊達正宗',img:'00009_m.jpg' },
+      { id:9, name:'伊達政宗',img:'00009_m.jpg' },
       { id:10, name:'大友宗麟',img:'00047_m.jpg' },
       { id:11, name:'毛利元就',img:'00038_m.jpg' },
       { id:12, name:'三好長慶',img:'00154_m.jpg' },

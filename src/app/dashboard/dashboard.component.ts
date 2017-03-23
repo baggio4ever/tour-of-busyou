@@ -17,7 +17,9 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.busyouService.getBusyous()
-      .then( busyous => this.busyous=busyous.slice(0,4) );
+      .then( busyous => {
+        this.busyous=busyous.slice(0,8);
+      });
   }
 
 }
