@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 
+const BASE = "assets/images/";
+
 @Injectable()
 export class InMemoryDataService implements InMemoryDbService {
 
@@ -9,11 +11,11 @@ export class InMemoryDataService implements InMemoryDbService {
 
   createDb() {
     let busyous = [
-      { id:1, name:'上杉謙信',img:'assets/images/00005_m.jpg' },
-      { id:2, name:'織田信長',img:'assets/images/00001_m.jpg' },
-      { id:3, name:'豊臣秀吉',img:'assets/images/00002_m.jpg' },
-      { id:4, name:'徳川家康',img:'assets/images/00003_m.jpg' },
-      { id:5, name:'武田信玄',img:'assets/images/00004_m.jpg' },
+      { id:1, name:'上杉謙信',img:'00005_m.jpg' },
+      { id:2, name:'織田信長',img:'00001_m.jpg' },
+      { id:3, name:'豊臣秀吉',img:'00002_m.jpg' },
+      { id:4, name:'徳川家康',img:'00003_m.jpg' },
+      { id:5, name:'武田信玄',img:'00004_m.jpg' },
       { id:6, name:'北条氏康',img:'' },
       { id:7, name:'今川義元',img:'' },
       { id:8, name:'浅井長政',img:'' },
@@ -36,6 +38,9 @@ export class InMemoryDataService implements InMemoryDbService {
       { id:25, name:'徳川綱吉',img:'' },
       { id:26, name:'徳川家茂',img:'' },
       { id:27, name:'徳川慶喜',img:'' },
+      { id:28, name:'明智光秀',img:'00006_m.jpg' },
+      { id:29, name:'石田光成',img:'00007_m.jpg' },
+      { id:30, name:'直江兼続',img:'00008_m.jpg' },
     ];
 
     return {busyous};    

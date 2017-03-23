@@ -61,9 +61,9 @@
       <div class="modal-body">
         <div *ngIf="busyouToBeDeleted" class="text-center">
           <img [src]="getBusyouPortrait(busyouToBeDeleted)" class="rounded">
-          <div>
+          <p>
             <strong>{{busyouToBeDeleted.name}}</strong> を削除しちゃって良いですか？
-          </div>
+          </p>
         </div>
         <div>
           <button type="button" class="btn btn-danger" (click)="deleteIt(); $event.stopPropagation(); staticModal.hide()">はい。バッサリお願いします</button>

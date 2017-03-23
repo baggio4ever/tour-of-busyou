@@ -64,10 +64,12 @@ export class BusyouListComponent implements OnInit {
   }
 
   getBusyouPortrait(busyou:Busyou):string {
+    const BASE = 'assets/images/';
+
     if(busyou.img != '') {
-      return busyou.img;
+      return BASE + busyou.img;
     } else {
-      return 'assets/images/no_portrait.jpg';
+      return BASE + 'no_portrait.jpg';
     }
   }
 }
