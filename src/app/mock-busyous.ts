@@ -1,5 +1,6 @@
 import { Busyou } from './busyou'
 
+/*
 export const BUSYOUS:Busyou[] = [
   { id:1, name:'上杉謙信'},
   { id:2, name:'織田信長'},
@@ -15,4 +16,12 @@ export const BUSYOUS:Busyou[] = [
   { id:12, name:'三好長慶'},
   { id:13, name:'島津義弘'},
   { id:14, name:'真田昌幸'},
+  { id:15, name:'真田信幸'},
+  { id:16, name:'真田信繁'},
+  { id:17, name:'真田幸隆'},
+  { id:18, name:'上杉景勝'},
+  { id:19, name:'上杉景虎'},
+  { id:20, name:'北条早雲'},
+  { id:21, name:'北条氏政'},
 ];
+*/

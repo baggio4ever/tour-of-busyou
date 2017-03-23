@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { TypeaheadMatch } from 'ng2-bootstrap/typeahead';
+
 import { Observable } from 'rxjs/Observable';
 import { Subject  } from 'rxjs/Subject';
 
@@ -52,6 +54,12 @@ export class BusyouSearchComponent implements OnInit {
         console.log(error);
         return Observable.of<Busyou[]>([]);
       })
+
+      this.dataSource = Observable.create((observer:any)=>{
+        // runs on every search
+        observer.next(this.selectedName);
+      })
+      .mergeMap((token)=>this.busyouSearchService.search(token));
   }
 
   gotoDetail(busyou:Busyou):void {
@@ -61,18 +69,38 @@ export class BusyouSearchComponent implements OnInit {
 
 
   public selectedName:string;
-  public names:string[] = [
-    'Shiga',
-    'Kyoto',
-    'Nara',
-    'Osaka',
-    'Wakayama',
-    'Hyogo',
-    'Fukui',
-    'Ishikawa',
-    'Toyama',
-    'Mie',
-    'Aichi',
-    'Gifu'
+  public dataSource:Observable<any>;
+
+  public typeaheadOnSelect(e:TypeaheadMatch):void {
+    console.log('Selected value: ',e.value);
+    console.log('Selected e: ',e);
+  }
+  public names:any[] = [
+    {kana:'Shiga',name:'滋賀'},
+    {kana:'Kyoto',name:'京都'},
+    {kana:'Nara',name:'奈良'},
+    {kana:'Osaka',name:'大阪'},
+    {kana:'Wakayama',name:'和歌山'},
+    {kana:'Hyogo',name:'兵庫'},
+    {kana:'Fukui',name:'福井'},
+    {kana:'Ishikawa',name:'石川'},
+    {kana:'Toyama',name:'富山'},
+    {kana:'Mie',name:'三重'},
+    {kana:'Aichi',name:'愛知'},
+    {kana:'Gifu',name:'岐阜'},
+    {kana:'Nagano',name:'長野'},
+    {kana:'Niigata',name:'新潟'},
+    {kana:'Shizuoka',name:'静岡'},
+    {kana:'Kanagawa',name:'神奈川'},
+    {kana:'Yamanashi',name:'山梨'},
+    {kana:'Tokyo',name:'東京'},
+    {kana:'Chiba',name:'千葉'},
+    {kana:'Saitama',name:'埼玉'},
+    {kana:'Ibaragi',name:'茨城'},
+    {kana:'Fukushima',name:'福島'},
+    {kana:'Yamagata',name:'山形'},
+    {kana:'Akita',name:'秋田'},
+    {kana:'Aomori',name:'青森'},
+    {kana:'Hokkaido',name:'北海道'}
   ];
 }

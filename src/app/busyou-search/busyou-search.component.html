@@ -12,6 +12,20 @@
   </div>
 
   <pre class="card card-block card-header">Model: {{selectedName | json}}</pre>
-  <input [(ngModel)]="selectedName" [typeahead]="names" class="form-control">
+  <input 
+    [(ngModel)]="selectedName"
+    [typeahead]="dataSource"
+    typeaheadOptionField="name"
+    placeholder="武将検索したい"
+    (typeaheadOnSelect)="typeaheadOnSelect($event)"
+    class="form-control">
+<!--  <pre class="card card-block card-header">Model: {{selectedName | json}}</pre>
+  <input 
+    [(ngModel)]="selectedName"
+    [typeahead]="names"
+    typeaheadOptionField="kana"
+    placeholder="県名をアルファベットで入れてみな"
+    class="form-control">
+-->
 </div>
 
