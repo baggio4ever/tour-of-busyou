@@ -10,5 +10,8 @@
       {{busyou.name}}
     </div>
   </div>
+
+  <pre class="card card-block card-header">Model: {{selectedName | json}}</pre>
+  <input [(ngModel)]="selectedName" [typeahead]="names" class="form-control">
 </div>
 

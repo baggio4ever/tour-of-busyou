@@ -58,4 +58,21 @@ export class BusyouSearchComponent implements OnInit {
     let link = ['/detail',busyou.id];
     this.router.navigate(link);
   }
+
+
+  public selectedName:string;
+  public names:string[] = [
+    'Shiga',
+    'Kyoto',
+    'Nara',
+    'Osaka',
+    'Wakayama',
+    'Hyogo',
+    'Fukui',
+    'Ishikawa',
+    'Toyama',
+    'Mie',
+    'Aichi',
+    'Gifu'
+  ];
 }

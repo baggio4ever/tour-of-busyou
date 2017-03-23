@@ -16,5 +16,4 @@ export class BusyouSearchService {
             .get(`app/busyous/?name=${term}`)
             .map( response=>response.json().data as Busyou[] );
   }
-
 }
