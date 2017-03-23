@@ -2,7 +2,11 @@
 <div>
   <label>武将名:</label>
   <input #busyouName />
-  <button type="button" class="btn btn-primary" (click)="add(busyouName.value); busyouName.value = ''">追加</button>
+  <button type="button" class="btn btn-primary" 
+    (click)="add(busyouName.value); busyouName.value = ''">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      追加
+  </button>
 <!--  <button (click)="add(busyouName.value); busyouName.value = ''">
     追加
   </button>
@@ -23,9 +27,16 @@
 <!--      <button type="button" class="btn btn-danger"
         (click)="delete(busyou); $event.stopPropagation()">削除</button>
 -->
-  <button type="button" class="btn btn-primary" (click)="gotoDetail()" [disabled]="busyou!==selectedBusyou">詳細</button>
+      <button type="button" class="btn btn-primary" 
+        (click)="gotoDetail()" [disabled]="busyou!==selectedBusyou">
+          <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+          詳細
+      </button>
       <button type="button" class="btn btn-danger"
-        (click)="busyouToBeDeleted=busyou; staticModal.show()" [disabled]="busyou!==selectedBusyou">削除</button>
+        (click)="busyouToBeDeleted=busyou; staticModal.show()" [disabled]="busyou!==selectedBusyou">
+          <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+          削除
+        </button>
     </td>
   </tr>
   </tbody>
