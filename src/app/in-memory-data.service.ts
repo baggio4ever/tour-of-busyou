@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 
-const BASE = "assets/images/";
+//const BASE = "assets/images/";
 
 @Injectable()
 export class InMemoryDataService implements InMemoryDbService {

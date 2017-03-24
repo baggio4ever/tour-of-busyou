@@ -63,7 +63,7 @@ export class BusyouListComponent implements OnInit {
     this.delete( this.busyouToBeDeleted );
   }
 
-  getBusyouPortrait(busyou:Busyou):string {
+/*  getBusyouPortrait(busyou:Busyou):string {
     const BASE = 'assets/images/';
 
     if(busyou.img != '') {
@@ -72,4 +72,5 @@ export class BusyouListComponent implements OnInit {
       return BASE + 'no_portrait.jpg';
     }
   }
+*/
 }

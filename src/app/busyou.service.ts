@@ -77,4 +77,13 @@ export class BusyouService {
                 .then( busyous=>busyous.find( busyou=>busyou.id===id ) );
   }
 */
+  getBusyouPortrait(busyou:Busyou):string {
+    const BASE = 'assets/images/';
+
+    if(busyou.img != '') {
+      return BASE + busyou.img;
+    } else {
+      return BASE + 'no_portrait.jpg';
+    }
+  }
 }

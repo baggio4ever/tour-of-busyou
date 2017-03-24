@@ -10,6 +10,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { ButtonsModule } from 'ng2-bootstrap/buttons';
 import { ModalModule } from 'ng2-bootstrap/modal';
 import { TypeaheadModule } from 'ng2-bootstrap/typeahead';
+import { CarouselModule } from 'ng2-bootstrap/carousel';
 
 import { AppComponent } from './app.component';
 
@@ -21,6 +22,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { BusyouSearchComponent } from './busyou-search/busyou-search.component';
+import { BusyouCarouselComponent } from './busyou-carousel/busyou-carousel.component';
 
 
 @NgModule({
@@ -30,6 +32,7 @@ import { BusyouSearchComponent } from './busyou-search/busyou-search.component';
     BusyouListComponent,
     DashboardComponent,
     BusyouSearchComponent,
+    BusyouCarouselComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import { BusyouSearchComponent } from './busyou-search/busyou-search.component';
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     ButtonsModule.forRoot(),
     ModalModule.forRoot(),
-    TypeaheadModule.forRoot()
+    TypeaheadModule.forRoot(),
+    CarouselModule.forRoot()
     // RouterModule.forRoot([
     //   {
     //     path: '',

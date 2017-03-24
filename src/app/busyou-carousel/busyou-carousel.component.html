@@ -1,0 +1,9 @@
+<h2>武将Carousel</h2>
+<carousel>
+  <slide *ngFor="let busyou of busyous">
+    <div>
+      <h5>{{busyou.name}}</h5>
+      <img [src]="busyouService.getBusyouPortrait(busyou)">
+    </div>
+  </slide>
+</carousel>

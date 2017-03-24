@@ -5,6 +5,7 @@ import { RouterModule,Route } from '@angular/router';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { BusyouDetailComponent } from '../busyou-detail/busyou-detail.component';
 import { BusyouListComponent } from '../busyou-list/busyou-list.component';
+import { BusyouCarouselComponent } from '../busyou-carousel/busyou-carousel.component';
 
 const routes:Route[] = [
   {
@@ -23,6 +24,10 @@ const routes:Route[] = [
   {
     path: 'busyous',
     component: BusyouListComponent
+  },
+  {
+    path: 'carousel',
+    component: BusyouCarouselComponent
   }
 ];
 
