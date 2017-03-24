@@ -1,9 +1,10 @@
 <h2>武将Carousel</h2>
 <carousel>
   <slide *ngFor="let busyou of busyous">
-    <div>
-      <h5>{{busyou.name}}</h5>
-      <img [src]="busyouService.getBusyouPortrait(busyou)">
+    <img [src]="busyouService.getBusyouPortrait(busyou)" width="380">
+    <div class="carousel-caption">
+      <h3>{{busyou.name}}</h3>
+      <p>さてどんな風に見えるかな</p>
     </div>
   </slide>
 </carousel>
