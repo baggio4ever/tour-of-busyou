@@ -1,0 +1,5 @@
+/*imgを中央揃えで表示する方法：https://techacademy.jp/magazine/8850
+*/
+div.caruImg {
+    text-align: center;
+}
