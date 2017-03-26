@@ -26,7 +26,10 @@
       <img [src]="busyouService.getBusyouPortrait(busyou)" class="rounded" width="64">
     </td>
     <td>
-      {{busyou.name}}
+      <ruby>
+      <rb>{{busyou.name}}</rb>
+      <rt>{{busyou.kana}}</rt>
+      </ruby>
     </td>
     <td>
 <!--      <button type="button" class="btn btn-danger"
