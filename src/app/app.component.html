@@ -1,37 +1,36 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
-      <span class="sr-only">メニュー</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a href="#" class="navbar-brand">
-      武将祭り
-    </a>
-  </div>
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pattern03">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#" class="navbar-brand">武将祭り</a>
+    </div>
 
-  <div id="gnavi" class="collapse navbar-collapse">
-    <ul class="nav navbar-nav navbar-right">
-      <li routerLink="/dashboard" routerLinkActive="active">
-        <a>
-          <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
-          ダッシュボード
-        </a>
-      </li>
-      <li routerLink="/busyous" routerLinkActive="active">
-        <a>
-          <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-          武将一覧
-        </a>
-      </li>
-      <li routerLink="/carousel" routerLinkActive="active">
-        <a>
-          <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
-          Carousel
-        </a>
-      </li>
-    </ul>
+    <div id="pattern03" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li routerLink="/dashboard" routerLinkActive="active">
+          <a>
+            <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+            ダッシュボード
+          </a>
+        </li>
+        <li routerLink="/busyous" routerLinkActive="active">
+          <a>
+            <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+            武将一覧
+          </a>
+        </li>
+        <li routerLink="/carousel" routerLinkActive="active">
+          <a>
+            <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+            Carousel
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 
@@ -39,13 +38,13 @@
   {{title}}
 </h1>
 -->
-<h6></h6>
 <!--<div>
   <a class="btn btn-primary" routerLink="/dashboard" routerLinkActive="active">ダッシュボード</a>
   <a class="btn btn-primary" routerLink="/busyous" routerLinkActive="active">武将たち</a>
 </div>
 -->
-<ul class="nav nav-tabs">
+
+<!--<ul class="nav nav-tabs">
   <li routerLink="/dashboard" routerLinkActive="active">
     <a>
       <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
@@ -65,11 +64,14 @@
     </a>
   </li>
 </ul>
+-->
 
 <router-outlet></router-outlet>
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">
+    <div class="text-center">
     2017
+    </div>
   </div>
 </nav>
