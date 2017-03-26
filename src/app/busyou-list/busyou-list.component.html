@@ -65,7 +65,13 @@
         <div *ngIf="busyouToBeDeleted" class="text-center">
           <img [src]="busyouService.getBusyouPortrait(busyouToBeDeleted)" class="rounded">
           <p>
-            <strong>{{busyouToBeDeleted.name}}</strong> を削除しちゃって良いですか？
+            <strong>
+              <ruby>
+                <rb>{{busyouToBeDeleted.name}}</rb>
+                <rt>{{busyouToBeDeleted.kana}}</rt>
+              </ruby>
+            </strong> 
+            を削除しちゃって良いですか？
           </p>
         </div>
         <div>
