@@ -11,6 +11,7 @@ import { ButtonsModule } from 'ng2-bootstrap/buttons';
 import { ModalModule } from 'ng2-bootstrap/modal';
 import { TypeaheadModule } from 'ng2-bootstrap/typeahead';
 import { CarouselModule } from 'ng2-bootstrap/carousel';
+import { CollapseDirective } from 'ng2-bootstrap/collapse'
 
 import { AppComponent } from './app.component';
 
@@ -33,6 +34,7 @@ import { BusyouCarouselComponent } from './busyou-carousel/busyou-carousel.compo
     DashboardComponent,
     BusyouSearchComponent,
     BusyouCarouselComponent,
+    CollapseDirective
   ],
   imports: [
     BrowserModule,

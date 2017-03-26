@@ -11,6 +11,17 @@ import { BusyouService } from './busyou.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+  /*
+  このサイトでAngular2とnavbarの共存方法を知った。ありがたい。
+   http://stackoverflow.com/questions/37438683/is-there-a-way-to-build-the-mobile-nav-bar-in-ng2-bootsrap
+  */
+  public isCollapsed:boolean = true;
+
+  closeCollapse():void {
+    this.isCollapsed = true;
+    console.log('close!');
+  }
+
 //  title = '武将祭り';
 
 //  busyous :Busyou[];
