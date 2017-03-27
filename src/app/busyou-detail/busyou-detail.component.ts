@@ -38,4 +38,8 @@ export class BusyouDetailComponent implements OnInit {
     this.busyouService.update(this.busyou)
       .then( ()=>this.goBack() );
   }
+
+  get diagnostic() {
+    return JSON.stringify(this.busyou);
+  }
 }

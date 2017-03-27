@@ -1,30 +1,63 @@
-<div *ngIf="busyou">
-  <h2>
-    {{busyou.name}}
-  </h2>
-  <alert type="info">オッス！オラ {{busyou.name}}！！</alert>
+<div class="container">
+  <div *ngIf="busyou">
+    {{diagnostic}}
+    <div class="row">
+      <div class="col-sm-6">
+        <img [src]="busyouService.getBusyouPortrait(busyou)">
+      </div>
 
-  <dl class="dl-horizontal">
-    <dt>id: </dt><dd>{{busyou.id}}</dd>
-    <dt>武将名: </dt>
-    <dd><input [(ngModel)]="busyou.name" placeholder="武将名"></dd>
-  </dl>
-<!--  <div>
-    <label>id: </label>{{busyou.id}}
+      <div class="col-sm-6">
+        <h2>
+          <ruby>
+            <rb>{{busyou.name}}</rb>
+            <rt>{{busyou.kana}}</rt>
+          </ruby>
+        </h2>
+      </div>
+    </div>
+
+    <alert type="info">オッス！オラ {{busyou.name}}！！</alert>
+
+    <form>
+      <div class="form-group">
+        <label for="busyou_id">id</label>
+        <input type="text" class="form-control" id="busyou_id" required [value]="busyou.id">
+      </div>
+
+      <div class="form-group">
+        <label for="name">武将名</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="busyou.name" name="name">
+      </div>
+
+      <div class="form-group">
+        <label for="kana">ふりがな</label>
+        <input type="text" class="form-control" id="kana" required [(ngModel)]="busyou.kana" name="kana">
+      </div>
+    </form>
+<!--    
+    <dl class="dl-horizontal">
+      <dt>id: </dt><dd>{{busyou.id}}</dd>
+      <dt>武将名: </dt>
+      <dd><input [(ngModel)]="busyou.name" placeholder="武将名"></dd>
+    </dl>
+    -->
+  <!--  <div>
+      <label>id: </label>{{busyou.id}}
+    </div>
+    <div>
+      <label>武将名: </label>
+      <input [(ngModel)]="busyou.name" placeholder="武将名">
+    </div>
+  -->  
+    <button type="button" class="btn btn-danger" (click)="goBack()">
+      戻る
+    </button>
+    <button type="button" class="btn btn-primary" (click)="save()">
+      <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+      保存
+    </button>
+  <!--  <button (click)="goBack()">戻る</button>
+    <button (click)="save()">保存</button>
+  -->
   </div>
-  <div>
-    <label>武将名: </label>
-    <input [(ngModel)]="busyou.name" placeholder="武将名">
-  </div>
--->  
-  <button type="button" class="btn btn-danger" (click)="goBack()">
-    戻る
-  </button>
-  <button type="button" class="btn btn-primary" (click)="save()">
-    <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
-    保存
-  </button>
-<!--  <button (click)="goBack()">戻る</button>
-  <button (click)="save()">保存</button>
--->
 </div>
