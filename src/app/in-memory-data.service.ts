@@ -37,7 +37,7 @@ export class InMemoryDataService implements InMemoryDbService {
 //      { id:24, name:'徳川吉宗',img:'' },
 //      { id:25, name:'徳川綱吉',img:'' },
 //      { id:26, name:'徳川家茂',img:'' },
-      { id:27, name:'徳川慶喜',kana:'とくがわ よしのぶ',img:'' },
+      { id:27, name:'徳川慶喜',kana:'とくがわ よしのぶ',img:'img_0.jpeg' },
       { id:28, name:'明智光秀',kana:'あけち みつひで',img:'00006_m.jpg' },
       { id:29, name:'石田光成',kana:'いしだ みつなり',img:'00007_m.jpg' },
       { id:30, name:'直江兼続',kana:'なおえ かねつぐ',img:'00008_m.jpg' },
