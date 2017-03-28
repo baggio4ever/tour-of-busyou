@@ -3,7 +3,7 @@
     {{diagnostic}}
     <div class="row">
       <div class="col-sm-6">
-        <img [src]="busyouService.getBusyouPortrait(busyou)">
+        <img [src]="busyouService.getBusyouPortrait(busyou)" (click)="ddd()">
       </div>
 
       <div class="col-sm-6">
@@ -13,10 +13,14 @@
             <rt>{{busyou.kana}}</rt>
           </ruby>
         </h2>
+        <div *ngFor="let alert of alerts">
+          <alert [type]="alert.type" [dismissOnTimeout]="alert.timeout">{{ alert.msg }}</alert>
+        </div>
       </div>
     </div>
 
-    <alert type="info">オッス！オラ {{busyou.name}}！！</alert>
+<!--    <alert type="info">オッス！オラ {{busyou.name}}！！</alert>
+-->
 
     <form>
       <div class="form-group">
