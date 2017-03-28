@@ -64,7 +64,7 @@ export class BusyouDetailComponent implements OnInit {
     } else {
         this.alerts.push({
           type: 'danger',
-          msg: `イェェェェイ！ ${this.busyou.name}！！ジャァァァスティス！！！`,
+          msg: `イェェェェイ！我こそは ${this.busyou.name}！！ジャァァァスティス！！！`,
           timeout: 5000
         });
 
