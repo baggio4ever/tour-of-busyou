@@ -40,6 +40,14 @@
         <label for="kana">ふりがな</label>
         <input type="text" class="form-control" id="kana" [(ngModel)]="busyou.kana" name="kana" placeholder="武将名のふりがなを入れてください">
       </div>
+
+      <div class="form-group">
+        <label for="buryoku">武力</label>
+        <input type="number" class="form-control" id="buryoku" required [(ngModel)]="busyou.param_buryoku" name="buryoku" placeholder="武力を入れてください" min="0" max="100" #buryoku="ngModel">
+        <div [hidden]="buryoku.valid || buryoku.pristine" class="alert alert-danger">
+          武力は必須なのです
+        </div>
+      </div>
     </form>
 <!--    
     <dl class="dl-horizontal">
