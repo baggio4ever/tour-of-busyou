@@ -48,6 +48,22 @@
           武力は必須なのです
         </div>
       </div>
+
+      <div class="form-group">
+        <label for="seiji">政治力</label>
+        <input type="number" class="form-control" id="seiji" required [(ngModel)]="busyou.param_seiji" name="seiji" placeholder="政治力を入れてください" min="0" max="100" #seiji="ngModel">
+        <div [hidden]="seiji.valid || seiji.pristine" class="alert alert-danger">
+          政治力は必須なのです
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="chibou">智謀</label>
+        <input type="number" class="form-control" id="chibou" required [(ngModel)]="busyou.param_chibou" name="chibou" placeholder="智謀を入れてください" min="0" max="100" #chibou="ngModel">
+        <div [hidden]="chibou.valid || chibou.pristine" class="alert alert-danger">
+          智謀は必須なのです
+        </div>
+      </div>
     </form>
 <!--    
     <dl class="dl-horizontal">
