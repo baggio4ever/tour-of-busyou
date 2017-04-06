@@ -147,6 +147,15 @@ export class InMemoryDataService implements InMemoryDbService {
       { id:46, name:'島左近',kana:'しま さこん',
         param_buryoku:0,param_seiji:0,param_chibou:0,
         img:'00019_m.jpg' },
+      { id:47, name:'浅井久政',kana:'あさい ひさまさ',
+        param_buryoku:0,param_seiji:0,param_chibou:0,
+        img:'00082_m.jpg' },
+      { id:48, name:'山内一豊',kana:'やまうち かずとよ',
+        param_buryoku:0,param_seiji:0,param_chibou:0,
+        img:'00099_m.jpg' },
+      { id:49, name:'細川忠興',kana:'ほそかわ ただおき',
+        param_buryoku:0,param_seiji:0,param_chibou:0,
+        img:'00122_m.jpg' },
     ];
 
     return {busyous};    
