@@ -39,7 +39,9 @@ export class BusyouListComponent implements OnInit {
 
   add(name:string):void {
     name = name.trim();
+
     if( !name ){ return; }
+
     this.busyouService.create(name)
           .then( busyou=>{
             this.busyous.push(busyou);

@@ -58,7 +58,7 @@ export class BusyouService {
 
   create(name:string):Promise<Busyou> {
     return this.http
-            .post(this.busyouUrl,JSON.stringify({name:name}),{headers:this.headers})
+            .post(this.busyouUrl,JSON.stringify({name:name,img:''}),{headers:this.headers})
             .toPromise()
             .then(res=>res.json().data)
             .catch(this.handleError);
