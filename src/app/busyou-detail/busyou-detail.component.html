@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <form>
+    <form (ngSubmit)="onSubmit()" #busyouForm="ngForm">
       <div class="form-group">
         <label for="busyou_id">id</label>
         <input type="text" class="form-control" id="busyou_id" required [value]="busyou.id" disabled>
@@ -61,6 +61,22 @@
           智謀は必須なのです
         </div>
       </div>
+
+      <div class="pull-right">
+        <button type="button" class="btn btn-default" (click)="clearBusyou(); busyouForm.reset()">クリア</button>
+        <button type="button" class="btn btn-danger" (click)="goBack()">
+          戻る
+        </button>
+<!--        <button type="button" class="btn btn-primary" (click)="save()">
+          <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+          保存
+        </button>
+-->
+        <button type="submit" class="btn btn-success" [disabled]="!busyouForm.form.valid">
+          <span class="glyphicon glyphicon-save" aria-hidden="true"></span>
+          保存
+        </button>
+      </div>
     </form>
 <!--    
     <dl class="dl-horizontal">
@@ -77,18 +93,5 @@
       <input [(ngModel)]="busyou.name" placeholder="武将名">
     </div>
   -->  
-    <div class="pull-right">
-      <button type="button" class="btn btn-danger" (click)="goBack()">
-        戻る
-      </button>
-      <button type="button" class="btn btn-primary" (click)="save()">
-        <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
-        保存
-      </button>
-      <button type="submit" class="btn btn-success">
-        <span class="glyphicon glyphicon-save" aria-hidden="true"></span>
-        保存2
-      </button>
-    </div>
   </div>
 </div>

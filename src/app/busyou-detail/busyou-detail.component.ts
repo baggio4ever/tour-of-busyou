@@ -43,6 +43,16 @@ export class BusyouDetailComponent implements OnInit {
     return JSON.stringify(this.busyou);
   }
 
+  clearBusyou():void {
+    this.busyou = {id:this.busyou.id,name:'',kana:'',param_buryoku:0,param_chibou:0,param_seiji:0,img:''};
+  }
+
+  onSubmit():void {
+    console.info('onSubmit!');
+
+    this.save();
+  }
+
   public alerts: any = [];
  
   public ddd(): void {
