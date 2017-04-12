@@ -2,7 +2,12 @@
 <div class="grid grid-pad">
   <a *ngFor="let busyou of busyous" [routerLink]="['/detail',busyou.id]" class="col-1-4">
     <div class="module busyou">
-      <h4>{{busyou.name}}</h4>
+      <h4>
+        <ruby>
+          <rb>{{busyou.name}}</rb>
+          <rt>{{busyou.kana}}</rt>
+        </ruby>
+      </h4>
     </div>
   </a>
 </div>
