@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { TypeaheadMatch } from 'ng2-bootstrap/typeahead';
+import { TypeaheadMatch } from 'ngx-bootstrap/typeahead';
 
 import { Observable } from 'rxjs/Observable';
 import { Subject  } from 'rxjs/Subject';

@@ -7,15 +7,15 @@ import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
-import { ButtonsModule } from 'ng2-bootstrap/buttons';
-import { ModalModule } from 'ng2-bootstrap/modal';
-import { TypeaheadModule } from 'ng2-bootstrap/typeahead';
-import { CarouselModule } from 'ng2-bootstrap/carousel';
-import { CollapseDirective } from 'ng2-bootstrap/collapse'
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CollapseDirective } from 'ngx-bootstrap/collapse'
 
 import { AppComponent } from './app.component';
 
-import { AlertModule } from 'ng2-bootstrap';
+import { AlertModule } from 'ngx-bootstrap';
 import { BusyouDetailComponent } from './busyou-detail/busyou-detail.component';
 import { BusyouListComponent } from './busyou-list/busyou-list.component';
 import { BusyouService } from './busyou.service';
