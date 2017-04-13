@@ -10,6 +10,8 @@ a {
     min-width: 120px;
     background-color: #405D6B;
     border-radius: 4px;
+
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.4);
 }
 
 .moduleX:hover {
