@@ -18,6 +18,17 @@ a {
     color: #405D6B;
 }
 
+/* 画像のホバーエフェクト15：  http://www.nxworld.net/tips/css-image-hover-effects.html */
+
+.moduleX img {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.moduleX:hover img {
+	opacity: .5;
+}
 
 /* 画像のトリミング方法： http://www.tam-tam.co.jp/tipsnote/html_css/post10099.html */
 
@@ -27,6 +38,7 @@ a {
   overflow: hidden;
   position: relative;
 }
+
 .trim img {
   position: absolute;
   top: 50%;
