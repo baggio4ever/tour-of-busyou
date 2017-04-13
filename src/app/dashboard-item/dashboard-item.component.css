@@ -15,9 +15,9 @@ a {
 }
 
 .moduleX:hover {
-    background-color: #aaa;
+    background-color: #73909E;
     cursor: pointer;
-    color: #405D6B;
+    color: #fff;
 }
 
 /* 画像のホバーエフェクト15：  http://www.nxworld.net/tips/css-image-hover-effects.html */

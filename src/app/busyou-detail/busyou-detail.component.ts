@@ -44,7 +44,7 @@ export class BusyouDetailComponent implements OnInit {
   }
 
   clearBusyou():void {
-    this.busyou = {id:this.busyou.id,name:'',kana:'',param_buryoku:0,param_chibou:0,param_seiji:0,img:''};
+    this.busyou = {id:this.busyou.id,name:'',kana:'',param_buryoku:0,param_chiryaku:0,param_seiji:0,img:''};
   }
 
   onSubmit():void {
