@@ -24,6 +24,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { BusyouSearchComponent } from './busyou-search/busyou-search.component';
 import { BusyouCarouselComponent } from './busyou-carousel/busyou-carousel.component';
+import { DashboardItemComponent } from './dashboard-item/dashboard-item.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { BusyouCarouselComponent } from './busyou-carousel/busyou-carousel.compo
     DashboardComponent,
     BusyouSearchComponent,
     BusyouCarouselComponent,
-    CollapseDirective
+    CollapseDirective,
+    DashboardItemComponent
   ],
   imports: [
     BrowserModule,
