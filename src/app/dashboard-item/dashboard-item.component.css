@@ -1,0 +1,19 @@
+a {
+    text-decoration: none;
+}
+
+.moduleX {
+    padding: 20px;
+    text-align: center;
+    color: #eee;
+    max-height: 120px;
+    min-width: 120px;
+    background-color: #405D6B;
+    border-radius: 4px;
+}
+
+.moduleX:hover {
+    background-color: #aaa;
+    cursor: pointer;
+    color: #405D6B;
+}

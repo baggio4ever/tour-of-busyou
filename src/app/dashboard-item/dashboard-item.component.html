@@ -1,8 +1,12 @@
 <p>
   <a [routerLink]="['/detail',busyou.id]">
-    dashboard-item works!
-    <br/>
-    <strong>名：{{busyou.name}}</strong>
+    <div class="moduleX">
+      <h4>
+        <ruby>
+          <rb>{{busyou.name}}</rb>
+          <rt>{{busyou.kana}}</rt>
+        </ruby>
+      </h4>
+    </div>
   </a>
 </p>
-
