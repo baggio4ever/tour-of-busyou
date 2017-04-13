@@ -46,7 +46,7 @@ export class BusyouSearchComponent implements OnInit {
       .distinctUntilChanged()  // ignore if next search is same as previous
       .switchMap( term=> term  // switch to new observable each time the term change
         // return the http search observable
-        ?this.busyouSearchService.search(term)
+        ?((term.length>0)? this.busyouSearchService.search(term):Observable.of<Busyou[]>([]))
         // or the observable of empty if there is no search term 
         :Observable.of<Busyou[]>([]))
       .catch(error=>{

@@ -12,6 +12,8 @@ export class BusyouSearchService {
   constructor(private http:Http) { }
 
   search(term:string):Observable<Busyou[]> {
+    console.info('search! by '+term +'  len='+term.length);
+
     return this.http
             .get(`app/busyous/?name=${term}`)
             .map( response=>response.json().data as Busyou[] );
