@@ -1,15 +1,25 @@
 <p>
   <a [routerLink]="['/detail',busyou.id]">
     <div class="moduleX">
-      <h4>
-        <ruby>
-          <rb>{{busyou.name}}</rb>
-          <rt>{{busyou.kana}}</rt>
-        </ruby>
-      </h4>
-      <h6>
-        武:{{busyou.param_buryoku}} 政:{{busyou.param_seiji}} 知:{{busyou.param_chibou}}
-      </h6>
+      <div class="row">
+        <div class="col-xs-5">
+          <div class="trim">
+            <img [src]="busyouService.getBusyouPortrait(busyou)">
+          </div>
+        </div>
+
+        <div class="col-xs-7">
+          <h4>
+            <ruby>
+              <rb>{{busyou.name}}</rb>
+              <rt>{{busyou.kana}}</rt>
+            </ruby>
+          </h4>
+          <h6>
+            武:{{busyou.param_buryoku}} 政:{{busyou.param_seiji}} 知:{{busyou.param_chibou}}
+          </h6>
+        </div>
+      </div>
     </div>
   </a>
 </p>

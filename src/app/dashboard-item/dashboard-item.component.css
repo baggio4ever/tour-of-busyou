@@ -17,3 +17,23 @@ a {
     cursor: pointer;
     color: #405D6B;
 }
+
+
+/* 画像のトリミング方法： http://www.tam-tam.co.jp/tipsnote/html_css/post10099.html */
+
+.trim {
+  width: 80px;  /* トリミングしたい幅 */
+  height: 80px;  /* トリミングしたい高さ */
+  overflow: hidden;
+  position: relative;
+}
+.trim img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+}

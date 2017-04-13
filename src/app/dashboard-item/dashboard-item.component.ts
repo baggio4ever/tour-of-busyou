@@ -10,7 +10,9 @@ import { BusyouService } from '../busyou.service';
 })
 export class DashboardItemComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private busyouService:BusyouService
+  ) { }
 
   @Input()
   busyou:Busyou;
