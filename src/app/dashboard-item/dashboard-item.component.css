@@ -20,6 +20,18 @@ a {
     color: #fff;
 }
 
+.col_bu { /* 武勇 */
+    color: #d88;
+}
+
+.col_sei { /* 政治 */
+    color: #8d8;
+}
+
+.col_chi { /* 知略 */
+    color: #88d;
+}
+
 /* 画像のホバーエフェクト15：  http://www.nxworld.net/tips/css-image-hover-effects.html */
 
 .moduleX img {

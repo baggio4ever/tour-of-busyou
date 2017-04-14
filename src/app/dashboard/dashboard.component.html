@@ -1,5 +1,5 @@
 <h3>トップ武将</h3>
-<div class="grid grid-pad">
+<!--<div class="grid grid-pad">
   <a *ngFor="let busyou of busyous" [routerLink]="['/detail',busyou.id]" class="zcol-1-4">
     <div class="module busyou">
       <h4>
@@ -11,11 +11,12 @@
     </div>
   </a>
 </div>
+-->
 
-  <div class="row">
+<div class="row">
   <app-dashboard-item *ngFor="let busyou of busyous" [busyou]="busyou" class="col-xs-3"></app-dashboard-item>
-  </div>
+</div>
 
-  <div class="row">
-    <app-busyou-search class="col-xs-offset-1 col-xs-10"></app-busyou-search>
-  </div>
+<div class="row">
+  <app-busyou-search class="col-xs-offset-1 col-xs-10"></app-busyou-search>
+</div>
