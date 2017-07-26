@@ -41,5 +41,9 @@ button:disabled {
 }
 
 .conXX {
-    border: solid 2px red;
+    border: solid 1px #a0a0a0;
+}
+
+.diagBox {
+    color: #bbbbee;
 }

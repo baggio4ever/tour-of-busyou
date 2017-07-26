@@ -1,6 +1,8 @@
 <div class="container conXX">
   <div *ngIf="busyou">
-    {{diagnostic}}
+    <div class="diagBox">
+      {{diagnostic}}
+    </div>
     <div class="row">
       <div class="col-sm-6">
         <img [src]="busyouService.getBusyouPortrait(busyou)" class="img-responsive" (click)="ddd()">
